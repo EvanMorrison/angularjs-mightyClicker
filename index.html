@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Bootstrap Template</title>
+    <title>Mighty Clicker</title>
     
 	<!--Google fonts-->    
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat" rel="stylesheet">
@@ -22,16 +22,20 @@
 </head>
 <body ng-controller="MCController">
 
-     <h1>{{title}}</h1>
-     <h2>{{BlueTitle}}</h2>
-     <h2>{{RedTitle}}</h2>
-
-
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!-- Bootstrap compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     <h1 while-down>{{title}}</h1>
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-xs-3 col-xs-offset-3">
+				<h1 id="blue-score" while-down class="text-center">{{blueScore}}</h1>
+				<button class="btn btn-primary btn-lg" role="button" while-down while-pressed="blueClick()">CLICK ME</button>
+			</div>
+    		<div class="col-xs-3 col-xs-offset-0">	
+				<h1 id="red-score" while-down class="text-center">{{redScore}}</h1>
+				<button class="btn btn-danger btn-lg" role="button" while-down while-pressed="redClick()">CLICK ME</button>
+    		</div> <!-- /col -->
+    	</div> <!-- row -->
+    </div> <!-- /container-fluid -->
+    
     
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
@@ -39,5 +43,6 @@
     <script src="app.js"></script>
     <script src="services/BlueService.js"></script>
     <script src="services/RedService.js"></script>
+    <script src="directives/mouseEventDirective.js"></script>
 </body>
 </html>

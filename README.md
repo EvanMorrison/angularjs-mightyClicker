@@ -1,5 +1,16 @@
 # angularjs-mightyClicker
 
+UPDATE: added a custom Directive to handle click vs hold-down mouse events.
+The difficulty is that 'mousedown' and 'mouseup' events both trigger before a 'click' event, so an onMouseup() used to stop the onMousedown() function will also prevent the click event. So the challenge was to have an event
+occur one time immediately on mousedown, and then begin repeating after 
+a half-second delay (along with making the element draggable just for 
+kicks). The repeating action is cancelled by mouseup, but mouseup must not
+prevent the initial click action.
+
+ 
+****
+
+
 V School 8 September, 2016 
 Exercise, Angular Web Applications, Level 2, Programming Principles Level 1
 
