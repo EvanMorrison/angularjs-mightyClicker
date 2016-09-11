@@ -12,7 +12,5 @@ app.service("BlueService", function() {
 			this.score = 100;
 		}
 		return this.score;
-	}
-
-
+	} 
 });
