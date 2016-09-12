@@ -9,13 +9,13 @@ app.controller("MCController", ["$scope", "BlueService", "RedService", function(
 
 	$scope.blueClick = function() {
 
-		$scope.blueScore = BlueService.blueClick();
-		$scope.redScore = RedService.blueClick();
+		$scope.blueScore = BlueService.increment();
+		$scope.redScore = RedService.decrement();
 	}
 
 	$scope.redClick = function() {
-		$scope.redScore = RedService.redClick();
-		$scope.blueScore = BlueService.redClick();
+		$scope.redScore = RedService.increment();
+		$scope.blueScore = BlueService.decrement();
 	}	
 		
 
